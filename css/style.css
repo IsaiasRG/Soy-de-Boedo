@@ -41,4 +41,29 @@ body section .parrafos .titulo {
   margin: 15px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#footer {
+  margin-top: 100px;
+  background-color: #192338;
+  height: 100px;
+}
+#footer .list-footer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}
+#footer .list-footer .li {
+  margin-top: 40px;
+  padding: 0 160px;
+}
+#footer .list-footer .li .link-redes {
+  color: aliceblue;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */
