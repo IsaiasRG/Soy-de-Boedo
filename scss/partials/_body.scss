@@ -1,0 +1,23 @@
+@import "./variables";
+
+body{
+    section {
+      
+        .parrafos{
+
+            display: left;
+            .titulo{
+                color:$color-primary;
+                margin: 15px;
+        
+            }
+        }
+
+        .cards-tienda{
+           display: flex;
+           justify-content: center;
+        }
+
+
+    }
+}

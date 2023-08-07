@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body #naveg {
+  display: flex;
+  justify-content: space-around;
+  background-color: #192338;
+}
+body #naveg .lista-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  gap: 10px;
+}
+body #naveg .lista-nav li .links {
+  text-decoration: none;
+  color: aliceblue;
+}
+body #naveg .lista-nav li .links:hover {
+  color: #DC0000;
+}
+body #naveg #casla-logo {
+  width: 120px;
+  height: 90px;
+  padding: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body section .parrafos {
+  display: left;
+}
+body section .parrafos .titulo {
+  color: #192338;
+  margin: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
