@@ -1,33 +1,48 @@
+@import "./variables";
+
 body {
+    
+        header {
 
-    #naveg{
-
-        display: flex;
-        justify-content: space-around;
-        background-color: $color-primary;
-
-        .lista-nav{
-            
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            list-style: none;
-            gap: 10px;
-            li{
-                .links{
-                    text-decoration: none;
-                    color: aliceblue;
-                    &:hover{
-                        color: $color-secondary;
-                    }
-                }
+        
+            .img-central{
+                display: flex;
+                justify-content: center;
+                width: 150px;
+                height: 100px;
 
             }
         }
-        #casla-logo{
-            width: 120px;
-            height: 90px;
-            padding: 10px;
-        }
-    } 
-}
+
+        #naveg{
+    
+            display: flex;
+            justify-content: space-around;
+            background-color: $color-primary;
+    
+            .lista-nav{
+                
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                list-style: none;
+                gap: 10px;
+                li{
+                    .links{
+                        text-decoration: none;
+                        color: aliceblue;
+                        &:hover{
+                            color: $color-secondary;
+                        }
+                    }
+    
+                }
+            }
+            .casla-logo{
+                width: 120px;
+                height: 90px;
+                padding: 10px;
+            }
+        } 
+    }
+

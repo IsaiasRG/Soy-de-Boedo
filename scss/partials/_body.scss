@@ -1,16 +1,32 @@
 @import "./variables";
 
 body{
-    section {
-      
-        .parrafos{
+    main{
+        section {
+            
+            .parrafos{
+                
+                display: left;
+                .titulo{
+                    color:$color-text;
+                    margin-bottom: 15px;
 
-            display: left;
-            .titulo{
-                color:$color-primary;
-                margin: 15px;
-        
+                    .palabra-clave{
+                        color: $colorsec;
+                    }
+            
+                }
+
+                .parrafos-info{
+                    margin: 15px;
+                }
             }
+
+            .cards{
+                margin: 10px 0 10px 0;
+            }
+           
+    
         }
 
     }

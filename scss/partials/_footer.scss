@@ -16,6 +16,9 @@
             .link-redes{
                 color: aliceblue;
                 text-decoration: none;
+                &:hover{
+                    color: $color-secondary;
+                }
             }
         }
         

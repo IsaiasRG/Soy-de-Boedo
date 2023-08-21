@@ -3,6 +3,17 @@
   padding: 0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body header .img-central {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 100px;
+}
 body #naveg {
   display: flex;
   justify-content: space-around;
@@ -22,7 +33,7 @@ body #naveg .lista-nav li .links {
 body #naveg .lista-nav li .links:hover {
   color: #DC0000;
 }
-body #naveg #casla-logo {
+body #naveg .casla-logo {
   width: 120px;
   height: 90px;
   padding: 10px;
@@ -33,12 +44,21 @@ body #naveg #casla-logo {
   padding: 0;
 }
 
-body section .parrafos {
+body main section .parrafos {
   display: left;
 }
-body section .parrafos .titulo {
-  color: #192338;
+body main section .parrafos .titulo {
+  color: #0e1881;
+  margin-bottom: 15px;
+}
+body main section .parrafos .titulo .palabra-clave {
+  color: #DC0000;
+}
+body main section .parrafos .parrafos-info {
   margin: 15px;
+}
+body main section .cards {
+  margin: 10px 0 10px 0;
 }
 
 * {
@@ -64,6 +84,52 @@ body section .parrafos .titulo {
 #footer .list-footer .li .link-redes {
   color: aliceblue;
   text-decoration: none;
+}
+#footer .list-footer .li .link-redes:hover {
+  color: #DC0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body main #socios {
+  align-items: center;
+  margin: 10px 0 0 0;
+}
+body main #socios #fondo-socios {
+  background-color: #192338;
+  padding: 50px;
+  width: 400px;
+  height: 400px;
+  gap: 65px;
+  margin-left: 30%;
+}
+body main #socios #fondo-socios #formulario .texto-label {
+  color: #ffffff;
+}
+body main #socios #fondo-socios #formulario .formulario-relleno {
+  background-color: #ffffff;
+  margin: 3px;
+}
+body main #socios #fondo-socios #formulario .casla-logo {
+  height: 50px;
+  justify-content: center;
+  margin-left: 40%;
+  margin-top: 30px;
+}
+body main #socios #fondo-socios #formulario .botones {
+  margin: 20px;
+  justify-content: space-around;
+  background-color: #5A4956;
+  color: #ACAD94;
+}
+body main #socios #fondo-socios #formulario #logo-form {
+  transition: all 2s;
+}
+body main #socios #fondo-socios #formulario #logo-form:hover {
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */
