@@ -1,96 +1,91 @@
-localStorage.setItem("miStock", JSON.stringify(tienda));
-localStorage.setItem("miStock-remeras", JSON.stringify(remeraslista));
-localStorage.setItem("miStock-abrigos", JSON.stringify(abrigosLista));
-localStorage.setItem("miStock-conj", JSON.stringify(conjuntosLista));
-localStorage.setItem("miStock-otros", JSON.stringify(variedadLista));
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
 
 // Cards agregados desde DOM
 
-let cardsRemeras = document.getElementById("cards-tienda-remeras");
+let cardsProd = document.getElementById("cards-tienda");
 
-for (const productos of remeraslista) {
-  cardsRemeras.innerHTML += `<div class="col-md-3">
+for (const producto of tienda) {
+  cardsProd.innerHTML += `<div class="col-md-3">
       <div class="card cartas-div" style="width: 18rem;">
-          <img src="${productos.foto}" class="card-img-top" height="300px" alt="imagen del producto">
+          <img src="${producto.foto}" class="card-img-top" height="300px" alt="imagen del producto">
           <div class="card-body">
-              <h5 class="card-title texto">${productos.nombre}</h5>
-              <p class="card-text">${productos.precio} $</p>
+              <h5 class="card-title texto">${producto.nombre}</h5>
+              <p class="card-text">${producto.precio} $</p>
               <a href="#" class="btn btn-primary añadir-carro">Añadir al carrito</a>
           </div>
       </div>
   </div>`;
 }
 
-let cardsAbrigos = document.getElementById("cards-tienda-abrigos");
-
-for (const productos of abrigosLista) {
-  cardsAbrigos.innerHTML += `<div class="col-md-3">
-      <div class="card cartas-div" style="width: 18rem;">
-          <img src="${productos.foto}" class="card-img-top" height="300px" alt="imagen del producto">
-          <div class="card-body">
-              <h5 class="card-title texto">${productos.nombre}</h5>
-              <p class="card-text">${productos.precio} $</p>
-              <a href="#" class="btn btn-primary añadir-carro">Añadir al carrito</a>
-          </div>
-      </div>
-  </div>`;
-}
-
-let cardsConjutos = document.getElementById("cards-tienda-conjuntos");
-
-for (const productos of conjuntosLista) {
-  cardsConjutos.innerHTML += `<div class="col-md-3">
-      <div class="card cartas-div" style="width: 18rem;">
-          <img src="${productos.foto}" class="card-img-top" height="300px" alt="imagen del producto">
-          <div class="card-body">
-              <h5 class="card-title texto">${productos.nombre}</h5>
-              <p class="card-text">${productos.precio} $</p>
-              <a href="#" class="btn btn-primary añadir-carro">Añadir al carrito</a>
-          </div>
-      </div>
-  </div>`;
-}
-
-let cardsOtrosprodc = document.getElementById("cards-tienda-variedad");
-
-for (const productos of variedadLista) {
-  cardsOtrosprodc.innerHTML += `<div class="col-md-3">
-      <div class="card cartas-div" style="width: 18rem;">
-          <img src="${productos.foto}" class="card-img-top" height="300px" alt="imagen del producto">
-          <div class="card-body">
-              <h5 class="card-title texto">${productos.nombre}</h5>
-              <p class="card-text">${productos.precio} $</p>
-              <a href="#" class="btn btn-primary añadir-carro">Añadir al carrito</a>
-          </div>
-      </div>
-  </div>`;
-}
 
 // funcion del carrito y el carrido agregado desde DOM
 
 
-let añadirCarrito = document.getElementsByClassName('añadir-carro');
-for(const botones of añadirCarrito){
-  botones.onclick = () => {
-    const productoCarro = tienda.find((product) => product.id == botones.id);
-    agregandoCarrito(productoCarro);
-    console.log(productoCarro)
-  }
+const agregarAlCarrito = (id) => {
 
-}
+	if (!carrito.some((producto) => producto.id === id)) {
+		const producto = tienda.find((producto) => producto.id === id);
+		carrito.push({ ...producto, cantidad: 1 });
 
-const tbody = document.getElementById('body-t');
- const carrito = [];
-function agregandoCarrito(product){
-    carrito.push(product);
-    // Swal.fire('Acabas de agregar '+ product.nombre + 'al carrito🛒');
-    tbody.innerHtml += `
-    <tr>    
+	} else {
+		const producto = carrito.find((producto) => producto.id === id);
+		producto.cantidad++;
+	}
+	
 
-        <td>${product.nombre}</td>
-        <td>${product.precio}</td>
+	localStorage.setItem("carrito", JSON.stringify(carrito));
+	mostrarCarrito();
+};
 
 
-    </tr>`
+const mostrarCarrito = () => {
+	const contenedorCarrito = document.querySelector(".carrito");
+	contenedorCarrito.innerHTML = "";
+	   
+	if (carrito.length > 0) {
 
-}
+		const productsCart = document.createElement("ul");
+		productsCart.classList.add("productsCart");
+		contenedorCarrito.appendChild(productsCart);
+		
+		const contenedorTotal = document.createElement("p");
+		actualizarTotal(contenedorTotal);
+		contenedorCarrito.appendChild(contenedorTotal);
+		carrito.forEach((producto) => {
+			const li = document.createElement("li");
+			li.innerHTML = `
+			<img src="${producto.imagen}" alt="${producto.nombre}" />
+			<div class="productContent">
+				<h3>${producto.nombre}</h3>
+				<p class="product-price">$${producto.precio}</p>
+				<p class="product-price">${producto.cantidad}u.</p>
+			</div>
+			<button id="eliminar-${producto.id}" class="remove">Eliminar</button>
+		`;
+			
+			productsCart.appendChild(li);
+			const boton = document.getElementById(`eliminar-${producto.id}`);
+			boton.addEventListener("click", () => {
+				eliminarProducto(producto.id);
+			});
+		});
+	} 
+    
+    else {
+		contenedorCarrito.innerHTML = '<p class="empty">Aun no has elejido ningun producto</p>';
+	}
+};
+
+const eliminarProducto = (id) => {
+	carrito = carrito.filter((producto) => producto.id !== id);
+	localStorage.setItem("carrito", JSON.stringify(carrito));
+	mostrarCarrito();
+};
+
+const actualizarTotal = (contenedor) => {
+	const total = carrito.reduce((acumulador, producto) => acumulador + producto.precio * producto.cantidad, 0);
+	contenedor.textContent = `Total: $${total}`;
+};
+

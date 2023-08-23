@@ -94,42 +94,62 @@ body main section .cards {
   padding: 0;
 }
 
-body main #socios {
-  align-items: center;
-  margin: 10px 0 0 0;
+#sesion h1 {
+  text-align: center;
+  color: #333;
 }
-body main #socios #fondo-socios {
-  background-color: #192338;
-  padding: 50px;
-  width: 400px;
-  height: 400px;
-  gap: 65px;
-  margin-left: 30%;
+#sesion form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-body main #socios #fondo-socios #formulario .texto-label {
-  color: #ffffff;
+#sesion form .campos-input {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
-body main #socios #fondo-socios #formulario .formulario-relleno {
-  background-color: #ffffff;
-  margin: 3px;
+#sesion form .campos-input label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
 }
-body main #socios #fondo-socios #formulario .casla-logo {
-  height: 50px;
+#sesion form .campos-input .input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+#sesion form .flex {
+  display: flex;
   justify-content: center;
-  margin-left: 40%;
-  margin-top: 30px;
+  align-items: center;
 }
-body main #socios #fondo-socios #formulario .botones {
-  margin: 20px;
-  justify-content: space-around;
-  background-color: #5A4956;
-  color: #ACAD94;
+#sesion form .button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
 }
-body main #socios #fondo-socios #formulario #logo-form {
-  transition: all 2s;
+#sesion form .button:hover {
+  background-color: #45a049;
 }
-body main #socios #fondo-socios #formulario #logo-form:hover {
-  transform: scale(1);
+#sesion .mensajes {
+  max-width: 400px;
+  margin: 30px auto;
+  background-color: #f6dada;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #bc3c3c;
+  text-align: center;
+}
+#sesion .hide {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
