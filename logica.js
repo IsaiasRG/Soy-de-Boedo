@@ -19,11 +19,9 @@ for (const producto of tienda) {
       </div>
   </div>`;
 
-  const botones = document.getElementsByClassName('añadir-carro');
-  botones.addEventListener("click", () => {
-	agregarAlCarrito(producto.id);
-})
+ 
 }
+
 
 // funcion del carrito y el carrido agregado desde DOM
 
@@ -58,7 +56,18 @@ const mostrarCarrito = () => {
 		const contenedorTotal = document.createElement("p");
 		actualizarTotal(contenedorTotal);
 		contenedorCarrito.appendChild(contenedorTotal);
+		
+		
 		carrito.forEach((producto) => {
+
+
+			const botones = document.getElementsByClassName('añadir-carro');
+			botones.addEventListener("click", () => {
+			  agregarAlCarrito(producto.id);
+			})
+
+
+
 			const li = document.createElement("li");
 			li.innerHTML = `
 			<img src="${producto.imagen}" alt="${producto.nombre}" />
