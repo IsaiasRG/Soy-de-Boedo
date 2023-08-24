@@ -1,4 +1,5 @@
 
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
@@ -13,12 +14,16 @@ for (const producto of tienda) {
           <div class="card-body">
               <h5 class="card-title texto">${producto.nombre}</h5>
               <p class="card-text">${producto.precio} $</p>
-              <a href="#" class="btn btn-primary añadir-carro">Añadir al carrito</a>
+              <a href="#" class="btn btn-primary añadir-carro"">Añadir al carrito</a>
           </div>
       </div>
   </div>`;
-}
 
+  const botones = document.getElementsByClassName('añadir-carro');
+  botones.addEventListener("click", () => {
+	agregarAlCarrito(producto.id);
+})
+}
 
 // funcion del carrito y el carrido agregado desde DOM
 
