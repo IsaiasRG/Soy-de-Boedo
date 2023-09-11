@@ -6,7 +6,7 @@ const tienda = [{
     precio: 26999,
     categoria:'Remeras',
     foto: '../img/rem-1.jpg',
-
+    cantidad: 1,
 },
 
 {
@@ -15,7 +15,7 @@ const tienda = [{
     precio: 26999,
     categoria:'Remeras',
     foto:'../img/rem-2.webp',
-    
+    cantidad: 1,
 },
 {
     id:3 ,
@@ -23,7 +23,7 @@ const tienda = [{
     precio: 26999,
     categoria:'Remeras',
     foto:'../img/rem-dor.png',
-    
+    cantidad: 1,  
 },
 {
     id:17,
@@ -31,7 +31,7 @@ const tienda = [{
     precio: 23999,
     categoria:'Remeras',
     foto: '../img/rem-arq1.jpg',
-
+    cantidad: 1, 
 },
 {
     id:4 ,
@@ -39,7 +39,7 @@ const tienda = [{
     precio:16800 ,
     categoria:'Buzos de San Lorenzo de Almagro' ,
     foto:'../img/buzo-wit.png',
-    
+    cantidad: 1,
 },
 {
     id:5 ,
@@ -47,6 +47,7 @@ const tienda = [{
     precio: 20900 ,
     categoria:'Buzos de San Lorenzo de Almagro' ,
     foto:'../img/buzo-capred.webp',
+    cantidad: 1,
 },
 {
     id:6 ,
@@ -54,6 +55,7 @@ const tienda = [{
     precio: 9520,
     categoria: 'Buzos de San Lorenzo de Almagro',
     foto:'../img/buzo-sim.webp',
+    cantidad: 1,
 },
 {
     id:7 ,
@@ -61,6 +63,7 @@ const tienda = [{
     precio: 7900,
     categoria:'Remeras',
     foto:'../img/rem-cot.webp',
+    cantidad: 1,
 },
 {
     id:8 ,
@@ -68,6 +71,7 @@ const tienda = [{
     precio:7900 ,
     categoria:'Remeras' ,
     foto:'../img/rem-cot2.webp',
+    cantidad: 1,
 },
 {
     id:9 ,
@@ -75,6 +79,7 @@ const tienda = [{
     precio:19500 ,
     categoria:'Buzos de San Lorenzo de Almagro' ,
     foto:'../img/buzo-capblue.png',
+    cantidad: 1,
 },
 {
     id:10 ,
@@ -82,6 +87,7 @@ const tienda = [{
     precio:16800,
     categoria:'Buzos de San Lorenzo de Almagro' ,
     foto:'../img/buzo-red.webp',
+    cantidad: 1,
 },
 {
     id:11 ,
@@ -89,6 +95,7 @@ const tienda = [{
     precio:7900 ,
     categoria:'Remeras' ,
     foto:'../img/rem-blue.webp',
+    cantidad: 1,
 },
 {
     id:12 ,
@@ -96,6 +103,7 @@ const tienda = [{
     precio:5600 ,
     categoria:'Remeras' ,
     foto:'../img/rem-neg.webp',
+    cantidad: 1,
 },
 {
     id:13 ,
@@ -103,6 +111,7 @@ const tienda = [{
     precio:16000 ,
     categoria:'Conjunto' ,
     foto:'../img/conj-alg.webp',
+    cantidad: 1,
 },
 {
     id:14 ,
@@ -110,6 +119,7 @@ const tienda = [{
     precio:6200 ,
     categoria:'Pelotas' ,
     foto:'../img/pelota-2.jpg',
+    cantidad: 1,
 },
 {
     id:15 ,
@@ -117,6 +127,7 @@ const tienda = [{
     precio:6200 ,
     categoria:'Pelotas' ,
     foto:'../img/pelota-1.jpg',
+    cantidad: 1,
 },
 {
     id:16 ,
@@ -124,6 +135,7 @@ const tienda = [{
     precio:14500 ,
     categoria:'Conjunto' ,
     foto:'../img/conj-entr.jpg',
+    cantidad: 1,
 },
 {
     id:16 ,
@@ -131,5 +143,6 @@ const tienda = [{
     precio:14500 ,
     categoria:'Conjunto' ,
     foto:'../img/conj-dep.jpg',
+    cantidad: 1,
 },
 ]

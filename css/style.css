@@ -44,6 +44,28 @@ body #naveg .casla-logo {
   padding: 0;
 }
 
+body main section h2 .carrito #ul li {
+  border-bottom: 1px solid #333;
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+}
+body main section h2 .carrito #ul li .img-carrito {
+  display: block;
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+}
+body main section h2 .carrito #ul li .productContent h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+body main section h2 .carrito #ul li .productContent .product-price {
+  font-weight: bold;
+}
 body main section .parrafos {
   display: left;
 }
